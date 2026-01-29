@@ -30,6 +30,7 @@ body {
     url("images/class-bg.jpg") center / cover no-repeat;
   animation: slowZoom 18s ease-in-out infinite;
   filter: brightness(0.9) blur(1px);
+  filter: brightness(0.85);
   z-index: 1;
 }
 
@@ -296,6 +297,40 @@ footer {
 @media (max-width: 600px) {
   .hero-title {
     font-size: 3.2rem;
+  }
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  .hero-bg {
+    height: 70vh; /* less vertical hijacking */
+  }
+
+  .hero-bg::before {
+    background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.9)),
+      url("images/class-bg.jpg") center top / cover no-repeat;
+    animation: none; /* stop zoom on mobile */
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-title sup {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    margin-top: 8px;
+  }
+
+  .hero-inner {
+    padding: 0 16px;
   }
 }
 
