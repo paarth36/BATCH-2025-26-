@@ -280,11 +280,6 @@ footer {
   opacity: 0.6;
   text-align: center;
 }
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @keyframes slowZoom {
   0% {
@@ -297,6 +292,13 @@ footer {
     transform: scale(1);
   }
 }
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+}
+
 
 
 
