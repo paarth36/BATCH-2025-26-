@@ -25,9 +25,13 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: red;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("images/class-bg.jpg") center / cover no-repeat;
+  animation: slowZoom 18s ease-in-out infinite;
   z-index: 1;
 }
+
 
 
 .hero-bg::after {
@@ -278,6 +282,7 @@ footer {
     transform: scale(1);
   }
 }
+
 
 
 
