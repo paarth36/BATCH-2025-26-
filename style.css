@@ -12,17 +12,44 @@ body {
 
 
 /* HERO */
-.hero {
+.hero-bg {
   height: 90vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%),
-    linear-gradient(180deg, #0c0c0c, #000);
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.85)
+    ),
+    url("images/class-bg.jpg") center / cover no-repeat;
+  animation: slowZoom 18s ease-in-out infinite;
+  z-index: 1;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(212,175,55,0.15),
+    transparent 60%
+  );
+  z-index: 2;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 3;
   text-align: center;
 }
 
@@ -40,6 +67,7 @@ body {
   letter-spacing: 2px;
   text-align: center;
   line-height: 1.1;
+  text-shadow: 0 0 20px rgba(212,175,55,0.35);
 }
 
 .hero-title sup {
@@ -241,5 +269,17 @@ footer {
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
   }
 }
