@@ -114,21 +114,6 @@ h2 {
   font-weight: 600;
   color: #d4af37;
 }
-.teacher-row {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap; /* mobile safety */
-}
-
-.card {
-  width: 280px;
-  background: #111;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-}
 
 /* CARDS */
 .card {
@@ -348,6 +333,7 @@ footer {
     padding: 0 16px;
   }
 }
+
 
 
 
