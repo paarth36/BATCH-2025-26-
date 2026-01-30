@@ -144,7 +144,7 @@ h2 {
 
 .highlight {
   max-width: 360px;
-  margin: auto;
+  margin: 0;
 }
 
 /* STUDENTS */
@@ -345,6 +345,7 @@ footer {
 .teacher-card {
   width: 320px;
 }
+
 
 
 
