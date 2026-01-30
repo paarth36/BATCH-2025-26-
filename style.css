@@ -334,6 +334,18 @@ footer {
   }
 }
 
+.teacher-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  flex-wrap: wrap; /* mobile won’t explode */
+}
+
+.teacher-card {
+  width: 320px;
+}
+
 
 
 
